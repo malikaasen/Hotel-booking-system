@@ -12,50 +12,73 @@ namespace SQLConnectionApplication
 {
 	class Data
 	{
-		
 
-        public partial class DataBase : DataContext
-        {
-            public Table<Rom> roms;
-            public Table<Booking> bookings;
-            public Table<Reservasjon> reservasjons;
-            public Table<Service> services;
-            public DataBase(string connection) : base(connection) { }
-        }
-        private DataBase db;
+
+		public partial class DataBase : DataContext
+		{
+			public Table<Rom> roms;
+			public Table<Booking> bookings;
+			public Table<Reservasjon> reservasjons;
+			public Table<Service> services;
+			public DataBase(string connection) : base(connection) { }
+		}
+		private DataBase db;
+
 		public Data()
 		{
-            //DataBase db =
-         db = new DataBase(System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+			db = new DataBase(System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
-        //db = new DataContext(System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-    }
+		}
 
-    public void leggTilBooking(Booking booking)
+		public void leggTilBooking(Booking booking)
 		{
-
+			Table<Booking> bookingene = db.GetTable<Booking>();
+			db.bookings.InsertOnSubmit(booking);
+			db.SubmitChanges();
 		}
 
 		public void leggTilRom(Rom rommet)
 		{
 			Table<Rom> Romene = db.GetTable<Rom>();
-			//db.Romene.InsertOnSubmit(rom);
 			db.roms.InsertOnSubmit(rommet);
-            db.SubmitChanges();
+			db.SubmitChanges();
 		}
 		public void leggTilReservasjon(Reservasjon reservasjon)
 		{
-           
-		}
-
-		public Rom finnRom(int RomID)
-		{
-            return null;
+			Table<Reservasjon> reservasjoner = db.GetTable<Reservasjon>();
+			db.reservasjons.InsertOnSubmit(reservasjon);
+			db.SubmitChanges();
 		}
 
 		public void leggTilService(Service service)
 		{
-
+			Table<Service> servicer = db.GetTable<Service>();
+			db.services.InsertOnSubmit(service);
+			db.SubmitChanges();
 		}
+
+		public Rom finnRom(int RomID)
+		{
+			Table<Rom> Romene = db.GetTable<Rom>();
+
+			IQueryable<Rom> romQuery =
+				from rom in Romene
+				where RomID == rom.Rom_ID
+				select rom;
+			return romQuery.FirstOrDefault<Rom>();
+		}
+
+		public Service finnService(int ServiceID)
+		{
+			Table<Service> Servicene = db.GetTable<Service>();
+
+			IQueryable<Service> serviceQuery =
+				from service in Servicene
+				where ServiceID == service.Service_ID
+				select service;
+			return serviceQuery.FirstOrDefault<Service>();
+		}
+
+
 	}
 }
