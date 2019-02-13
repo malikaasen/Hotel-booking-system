@@ -65,9 +65,9 @@ namespace SQLConnectionApplication
 				this._Rom_ID = value;
 			}
 		}
-		private IServiceProvider _Rom;
+		private Rom _Rom;
 		[Association(Storage = "_Rom", ThisKey = "Rom_ID")]
-		public IServiceProvider rom
+		public Rom rom
 		{
 			get
 			{
