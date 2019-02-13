@@ -27909,31 +27909,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\malik\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
+    "C:\\Users\\deadmaggi\\.nuget\\packages\\": {},
+    "C:\\Program Files\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\malik\\source\\repos\\Hotel service\\Hotel service\\Hotel service.csproj",
+      "projectUniqueName": "C:\\Users\\deadmaggi\\Source\\Repos\\h181222\\Hotel-booking-system\\Hotel service\\Hotel service.csproj",
       "projectName": "Hotel service",
-      "projectPath": "C:\\Users\\malik\\source\\repos\\Hotel service\\Hotel service\\Hotel service.csproj",
-      "packagesPath": "C:\\Users\\malik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\malik\\source\\repos\\Hotel service\\Hotel service\\obj\\",
+      "projectPath": "C:\\Users\\deadmaggi\\Source\\Repos\\h181222\\Hotel-booking-system\\Hotel service\\Hotel service.csproj",
+      "packagesPath": "C:\\Users\\deadmaggi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\deadmaggi\\Source\\Repos\\h181222\\Hotel-booking-system\\Hotel service\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        "C:\\Program Files\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\malik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\deadmaggi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.10240"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

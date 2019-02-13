@@ -11794,30 +11794,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\malik\\.nuget\\packages\\": {},
+    "C:\\Users\\deadmaggi\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\malik\\source\\repos\\Hotel service\\Booking\\Booking.csproj",
+      "projectUniqueName": "C:\\Users\\deadmaggi\\Source\\Repos\\h181222\\Hotel-booking-system\\Booking\\Booking.csproj",
       "projectName": "Booking",
-      "projectPath": "C:\\Users\\malik\\source\\repos\\Hotel service\\Booking\\Booking.csproj",
-      "packagesPath": "C:\\Users\\malik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\malik\\source\\repos\\Hotel service\\Booking\\obj\\",
+      "projectPath": "C:\\Users\\deadmaggi\\Source\\Repos\\h181222\\Hotel-booking-system\\Booking\\Booking.csproj",
+      "packagesPath": "C:\\Users\\deadmaggi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\deadmaggi\\Source\\Repos\\h181222\\Hotel-booking-system\\Booking\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\malik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\deadmaggi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
