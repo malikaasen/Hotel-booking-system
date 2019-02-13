@@ -77,5 +77,19 @@ namespace SQLConnectionApplication
 				this._Status = value;
 			}
 		}
-	}
+
+        private string _Servicetype;
+        [Column(Storage = "_Servicetype")]
+        public string Servicetype
+        {
+            get
+            {
+                return this._Servicetype;
+            }
+            set
+            {
+                this._Servicetype = value;
+            }
+        }
+    }
 }
