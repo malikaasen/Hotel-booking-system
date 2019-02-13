@@ -1,0 +1,7 @@
+C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.exe.config
+C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.exe
+C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.pdb
+C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csprojAssemblyReference.cache
+C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CoreCompileInputs.cache
+C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.exe
+C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.pdb
