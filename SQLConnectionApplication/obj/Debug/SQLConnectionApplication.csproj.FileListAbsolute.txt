@@ -12,3 +12,10 @@ C:\code\School\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnec
 C:\code\School\Hotel-booking-system\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.exe.config
 C:\code\School\Hotel-booking-system\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.exe
 C:\code\School\Hotel-booking-system\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.pdb
+C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.exe.config
+C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.exe
+C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.pdb
+C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csprojAssemblyReference.cache
+C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CoreCompileInputs.cache
+C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.exe
+C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.pdb

@@ -32,19 +32,18 @@ namespace SQLConnectionApplication
 				Console.WriteLine("Rom_ID={0}, Senger={1}, Storrelse={2}, Quality={3}", rom.Rom_ID, rom.Senger, rom.Storrelse, rom.Quality);
 			}
 
-			//          Rom rommet = new Rom
-			//          {
-			//              Quality = "God",
-			//          Senger = 6,
-			//          Rom_ID = 8,
-			//          Storrelse = "L"
-			//      };
-			////	rommet.Services = new EntitySet<Service>();
+            Rom rommet = new Rom
+            {
+                Quality = "God",
+                Senger = 6,
+                Rom_ID = 100,
+                Storrelse = "L"
+            };
 
-				Data data = new Data();
-			//	data.leggTilRom(rommet);
-			Rom rommet = data.finnRom(7);
-			Console.WriteLine("Rommet er funnet med ID:" + rommet.Rom_ID);
+            Data data = new Data();
+				data.leggTilRom(rommet);
+			Rom rommet1 = data.finnRom(7);
+			Console.WriteLine("Rommet er funnet med ID:" + rommet1.Rom_ID);
 
 			Table<Service> Servicene = dc.GetTable<Service>();
 
