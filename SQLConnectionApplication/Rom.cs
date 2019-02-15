@@ -65,7 +65,7 @@ namespace SQLConnectionApplication
 			}
 		}
 
-		private EntitySet<Service> _Service;
+		private EntitySet<Service> _Service = new EntitySet<Service>();
 		[Association(Storage = "_Service", OtherKey = "Service_ID")]
 		public EntitySet<Service> Services
 		{
