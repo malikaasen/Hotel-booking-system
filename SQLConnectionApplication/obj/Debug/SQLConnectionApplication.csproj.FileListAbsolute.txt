@@ -5,3 +5,7 @@ C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplicatio
 C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CoreCompileInputs.cache
 C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.exe
 C:\Users\deadmaggi\source\repos\SQLConnectionApplication\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.pdb
+C:\code\School\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csprojAssemblyReference.cache
+C:\code\School\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CoreCompileInputs.cache
+C:\code\School\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.exe
+C:\code\School\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.pdb
