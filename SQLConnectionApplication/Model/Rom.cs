@@ -5,28 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
+using SQLConnectionApplication;
 
-namespace SQLConnectionApplication
+namespace SQLConnectionApplication.Model
 {
-	[Table(Name = "Reservasjon_ID")]
-	class Reservasjon
+	[Table(Name = "Rom")]
+	class Rom
 	{
-		private int _Reservasjon_ID;
-		[Column(IsPrimaryKey = true, Storage = "_Reservasjon_ID")]
-		public int Reservasjon_ID
+		private int _Rom_ID;
+		[Column(IsPrimaryKey = true, Storage = "_Rom_ID")]
+		public int Rom_ID
 		{
-
 			get
 			{
-				return this._Reservasjon_ID;
+				return this._Rom_ID;
 			}
 			set
 			{
-				this._Reservasjon_ID = value;
+				this._Rom_ID = value;
 			}
-
 		}
-
 		private int _Senger;
 		[Column(Storage = "_Senger")]
 		public int Senger
@@ -40,7 +38,6 @@ namespace SQLConnectionApplication
 				this._Senger = value;
 			}
 		}
-
 		private string _Storrelse;
 		[Column(Storage = "_Storrelse")]
 		public string Storrelse
@@ -54,32 +51,20 @@ namespace SQLConnectionApplication
 				this._Storrelse = value;
 			}
 		}
-		private string _Dato_Start;
-		[Column(Storage = "_Dato_Start")]
-		public string Dato_Start
+		private string _Quality;
+		[Column(Storage = "_Quality")]
+		public string Quality
 		{
 			get
 			{
-				return this._Dato_Start;
+				return this._Quality;
 			}
 			set
 			{
-				this._Dato_Start = value;
-			}
-		}
-		private string _Dato_Slutt;
-		[Column(Storage = "_Dato_Slutt")]
-		public string Dato_Slutt
-		{
-			get
-			{
-				return this._Dato_Slutt;
-			}
-			set
-			{
-				this._Dato_Slutt = value;
+				this._Quality = value;
 			}
 		}
 
+	
 	}
 }

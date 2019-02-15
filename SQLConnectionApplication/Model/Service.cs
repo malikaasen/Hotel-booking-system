@@ -7,7 +7,7 @@ using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
 
-namespace SQLConnectionApplication
+namespace SQLConnectionApplication.Model
 {
 	[Table(Name = "Service")]
 	class Service

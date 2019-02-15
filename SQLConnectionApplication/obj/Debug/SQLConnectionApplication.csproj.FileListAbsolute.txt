@@ -19,3 +19,7 @@ C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication
 C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CoreCompileInputs.cache
 C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.exe
 C:\Users\181208\source\GitHubRepos\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.pdb
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csprojAssemblyReference.cache
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CoreCompileInputs.cache
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.exe
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.pdb

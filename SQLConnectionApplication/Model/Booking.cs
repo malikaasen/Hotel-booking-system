@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-namespace SQLConnectionApplication
+namespace SQLConnectionApplication.Model
 {
 	[Table(Name = "Booking")]
 	class Booking

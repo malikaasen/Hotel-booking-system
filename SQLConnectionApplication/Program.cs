@@ -7,6 +7,8 @@ using System.Linq;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using System.Data.SqlClient;
+using SQLConnectionApplication.DataProviders;
+using SQLConnectionApplication.Model;
 
 
 namespace SQLConnectionApplication
