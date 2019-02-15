@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking", "Booking\Booking.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front desk", "Front desk\Front desk.csproj", "{895AA63B-6F6B-459E-AA89-37E55D9F9B7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLConnectionApplication", "..\..\SQLConnectionApplication\SQLConnectionApplication\SQLConnectionApplication.csproj", "{3CCA3773-8C04-4B25-B52A-241060F9771A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLConnectionApplication", "SQLConnectionApplication\SQLConnectionApplication.csproj", "{3CCA3773-8C04-4B25-B52A-241060F9771A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
