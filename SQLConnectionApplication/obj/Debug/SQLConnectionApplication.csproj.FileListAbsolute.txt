@@ -23,3 +23,11 @@ C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects
 C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CoreCompileInputs.cache
 C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.exe
 C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.pdb
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.exe.config
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.exe
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\bin\Debug\SQLConnectionApplication.pdb
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.dll
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.xml
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.SqlServer.xml
+C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CopyComplete

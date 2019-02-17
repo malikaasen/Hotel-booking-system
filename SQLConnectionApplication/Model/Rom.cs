@@ -6,65 +6,30 @@ using System.Threading.Tasks;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using SQLConnectionApplication;
+using System.ComponentModel.DataAnnotations;
 
 namespace SQLConnectionApplication.Model
 {
-	[Table(Name = "Rom")]
-	class Rom
-	{
-		private int _Rom_ID;
-		[Column(IsPrimaryKey = true, Storage = "_Rom_ID")]
-		public int Rom_ID
-		{
-			get
-			{
-				return this._Rom_ID;
-			}
-			set
-			{
-				this._Rom_ID = value;
-			}
-		}
-		private int _Senger;
-		[Column(Storage = "_Senger")]
-		public int Senger
-		{
-			get
-			{
-				return this._Senger;
-			}
-			set
-			{
-				this._Senger = value;
-			}
-		}
-		private string _Storrelse;
-		[Column(Storage = "_Storrelse")]
-		public string Storrelse
-		{
-			get
-			{
-				return this._Storrelse;
-			}
-			set
-			{
-				this._Storrelse = value;
-			}
-		}
-		private string _Quality;
-		[Column(Storage = "_Quality")]
-		public string Quality
-		{
-			get
-			{
-				return this._Quality;
-			}
-			set
-			{
-				this._Quality = value;
-			}
-		}
+    public enum Storrelse
+    {
+        Lite, Middels, Stort
+    }
 
-	
-	}
+    public enum Kvalitet
+    {
+        Dårlig, Middels, Bra
+    }
+
+    public class Rom
+    {
+        [Key]
+        public int RomID { get; set; }
+        public Storrelse Storrelse { get; set; }
+        public Kvalitet Kvalitet { get; set; }
+        public int AntallSenger { get; set; }
+
+        public virtual ICollection<Reservasjon> Reservasjoner { get; set; }
+
+
+    }
 }
