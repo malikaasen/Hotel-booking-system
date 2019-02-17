@@ -11800,11 +11800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\School\\DAT154 - Systemutvikling og Applikasjonsarkitektur\\DOTNetProjects\\Hotel-booking-system\\Booking\\Booking.csproj",
+      "projectUniqueName": "C:\\Code\\School\\Hotel-booking-system\\Booking\\Booking.csproj",
       "projectName": "Booking",
-      "projectPath": "C:\\Code\\School\\DAT154 - Systemutvikling og Applikasjonsarkitektur\\DOTNetProjects\\Hotel-booking-system\\Booking\\Booking.csproj",
+      "projectPath": "C:\\Code\\School\\Hotel-booking-system\\Booking\\Booking.csproj",
       "packagesPath": "C:\\Users\\oyste\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\School\\DAT154 - Systemutvikling og Applikasjonsarkitektur\\DOTNetProjects\\Hotel-booking-system\\Booking\\obj\\",
+      "outputPath": "C:\\Code\\School\\Hotel-booking-system\\Booking\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -31,3 +31,8 @@ C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects
 C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.xml
 C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.SqlServer.xml
 C:\Code\School\DAT154 - Systemutvikling og Applikasjonsarkitektur\DOTNetProjects\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CopyComplete
+C:\Code\School\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.dll
+C:\Code\School\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code\School\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.xml
+C:\Code\School\Hotel-booking-system\SQLConnectionApplication\bin\Debug\EntityFramework.SqlServer.xml
+C:\Code\School\Hotel-booking-system\SQLConnectionApplication\obj\Debug\SQLConnectionApplication.csproj.CopyComplete

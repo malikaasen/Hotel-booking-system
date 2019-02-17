@@ -43,6 +43,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,7 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext.cs" />
+    <Compile Include="DataProviders\KundeDataprovider.cs" />
+    <Compile Include="DataProviders\ReservasjonDataprovider.cs" />
     <Compile Include="DataProviders\RomDataprovider.cs" />
+    <Compile Include="DataProviders\ServiceOppgaveDataprovider.cs" />
     <Compile Include="DBInitializer.cs" />
     <Compile Include="Model\Kunde.cs" />
     <Compile Include="Model\ServiceOppgave.cs" />

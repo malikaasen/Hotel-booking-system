@@ -1,36 +1,30 @@
-﻿using SQLConnectionApplication.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SQLConnectionApplication.Model;
 
 namespace SQLConnectionApplication.DataProviders
 {
-   public class RomDataprovider
+    public class ServiceOppgaveDataprovider
     {
-
-        public Rom FinnRom(int romNummer)
-        {
-            Rom rom;
-            using (var context = new DatabaseContext())
-            {
-                 rom = context.Rom.Where(r => r.RomID == romNummer).FirstOrDefault();
-            }
-
-            return rom;
-        }
-
-        public List<Rom> FinnAlleRom()
+        public void LeggTilOppgave(ServiceOppgave serviceOppgave)
         {
             using (var context = new DatabaseContext())
             {
-                return context.Rom.ToList();
+                context.ServiceOppgaver.Add(serviceOppgave);
+                context.SaveChanges();
             }
         }
 
-        
+        public List<ServiceOppgave> FinnAlleOppgaver()
+        {
+            using (var context = new DatabaseContext())
+            {
+                return context.ServiceOppgaver.ToList();
+            }
+        }
 
 
     }

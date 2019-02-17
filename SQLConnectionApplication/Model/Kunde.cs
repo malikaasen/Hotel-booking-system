@@ -10,5 +10,11 @@ namespace SQLConnectionApplication.Model
 
         //Navigational properties
         public virtual ICollection <Reservasjon> Reservasjoner { get; set; }
+
+
+        public override string ToString()
+        {
+            return $"KundeID: {KundeID}, Navn {Navn}, Passord: {Passord}";
+        }
     }
 }

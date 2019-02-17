@@ -31,5 +31,9 @@ namespace SQLConnectionApplication.Model
         public virtual ICollection<Reservasjon> Reservasjoner { get; set; }
 
 
+        public override string ToString()
+        {
+            return $"RomId: {RomID}, Størrelse: {Storrelse}, Kvalitet {Kvalitet}, Antall senger {AntallSenger}";
+        }
     }
 }

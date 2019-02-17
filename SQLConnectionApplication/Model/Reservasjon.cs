@@ -24,5 +24,10 @@ namespace SQLConnectionApplication.Model
         //Navigational properties
         public virtual Rom Rom { get; set; }
         public virtual Kunde Kunde { get; set; }
+
+        public override string ToString()
+        {
+            return $"RomNummer: {RomId}, Fra dato: {FraDato.Date}, Til dato: {TilDato.Date}, Kunde: {Kunde.Navn}";
+        }
     }
 }

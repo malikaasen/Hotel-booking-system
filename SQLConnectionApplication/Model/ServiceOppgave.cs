@@ -27,5 +27,11 @@ namespace SQLConnectionApplication.Model
 
         public virtual Rom Rom { get; set; }
 
+
+        public override string ToString()
+        {
+            return $"Oppgave type: {OppgaveType}, Romnummer: {RomID}, Beskrivelse {Beskrivelse}, Status: {Status}";
+        }
+
     }
 }
