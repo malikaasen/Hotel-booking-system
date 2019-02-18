@@ -11,18 +11,26 @@ namespace SQLConnectionApplication.DataProviders
     {
         public void LeggTilOppgave(ServiceOppgave serviceOppgave)
         {
-            using (var context = new DatabaseContext())
+            using (var DBContext = new DatabaseContext())
             {
-                context.ServiceOppgaver.Add(serviceOppgave);
-                context.SaveChanges();
+                DBContext.ServiceOppgaver.Add(serviceOppgave);
+                DBContext.SaveChanges();
             }
         }
 
         public List<ServiceOppgave> FinnAlleOppgaver()
         {
-            using (var context = new DatabaseContext())
+            using (var DBContext = new DatabaseContext())
             {
-                return context.ServiceOppgaver.ToList();
+                return DBContext.ServiceOppgaver.ToList();
+            }
+        }
+
+        public List<ServiceOppgave> FinnOppgaver(OppgaveType oppgaveType)
+        {
+            using (var DBContext = new DatabaseContext())
+            {
+                return DBContext.ServiceOppgaver.Where(o => o.OppgaveType == oppgaveType).ToList();
             }
         }
 
