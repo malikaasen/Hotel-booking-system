@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SQLConnectionApplication
 {
-    class DBInitializer<T> : CreateDatabaseIfNotExists<DatabaseContext>
+    class DBInitializer<T> : DropCreateDatabaseAlways<DatabaseContext>
     {
         protected override void Seed(DatabaseContext context)
         {
