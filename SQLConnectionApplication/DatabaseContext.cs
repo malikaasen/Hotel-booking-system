@@ -19,5 +19,6 @@ namespace SQLConnectionApplication
         public virtual DbSet<Reservasjon> Reservasjoner { get; set; }
         public virtual DbSet<Kunde> Kunder { get; set; }
         public virtual DbSet<ServiceOppgave> ServiceOppgaver { get; set; }
+        public virtual DbSet<Gjest> Gjester { get; set; }
     }
 }
