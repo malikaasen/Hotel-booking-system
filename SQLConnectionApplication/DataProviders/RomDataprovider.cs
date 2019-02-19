@@ -39,7 +39,7 @@ namespace SQLConnectionApplication.DataProviders
             }
         }
 
-        public void slettRom(int romNummer) {
+        public void SlettRom(int romNummer) {
             using (var context = new DatabaseContext())
             {
                 context.Rom.Remove(context.Rom.Where(r => r.RomID == romNummer).FirstOrDefault());
@@ -47,7 +47,7 @@ namespace SQLConnectionApplication.DataProviders
             }
         }
 
-        public void editRom(Rom rom) {
+        public void EditRom(Rom rom) {
 			Rom rommet;
 			using (var context = new DatabaseContext())
             {
@@ -56,8 +56,6 @@ namespace SQLConnectionApplication.DataProviders
                 rommet.Storrelse = rom.Storrelse;
                 rommet.Kvalitet = rom.Kvalitet;
                 context.SaveChanges();
-                
-                  
             }
         }
 

@@ -26,7 +26,7 @@ namespace SQLConnectionApplication.DataProviders
             }
         }
 
-        public void slettReservajon(int reservasjonsID)
+        public void SlettReservasjon(int reservasjonsID)
         {
             using (var context = new DatabaseContext())
             {

@@ -77,7 +77,7 @@ namespace Front_desk
 			var selectedItems = ListView1.SelectedItems;
 			foreach (Rom selectedItem in selectedItems)
 			{
-				romProvider.slettRom(Convert.ToInt32(selectedItem.RomID));
+				romProvider.SlettRom(Convert.ToInt32(selectedItem.RomID));
 			}
 
 			ShowData();
@@ -106,7 +106,7 @@ namespace Front_desk
 			rom.Storrelse = (Storrelse)StorrelseBox.SelectedIndex;
 			rom.Kvalitet = (Kvalitet)KvalitetBox.SelectedIndex;
 			rom.AntallSenger = Convert.ToInt32(this.AntallSenger.Text);
-            romProvider.editRom(rom);
+            romProvider.EditRom(rom);
 
             ShowData();
 		}

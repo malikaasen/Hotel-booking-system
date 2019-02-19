@@ -37,7 +37,7 @@ namespace Front_desk
             var selectedItems = ListView1.SelectedItems;
             foreach (Reservasjon selectedItem in selectedItems)
             {
-                reservasjonProvider.slettReservajon(Convert.ToInt32(selectedItem.ReservasjonID));
+                reservasjonProvider.SlettReservasjon(Convert.ToInt32(selectedItem.ReservasjonID));
             }
 
             ShowData();
