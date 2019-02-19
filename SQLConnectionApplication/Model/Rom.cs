@@ -12,12 +12,12 @@ namespace SQLConnectionApplication.Model
 {
     public enum Storrelse
     {
-        Lite, Middels, Stort
+        Lite = 0, Middels = 1, Stort = 2
     }
 
     public enum Kvalitet
     {
-        Dårlig, Middels, Bra
+        Dårlig = 0, Middels = 1, Bra = 2
     }
 
     public class Rom

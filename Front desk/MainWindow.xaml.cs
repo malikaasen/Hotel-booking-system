@@ -24,5 +24,17 @@ namespace Front_desk
         {
             InitializeComponent();
         }
-    }
+
+		private void OpneRomVindu(object sender, RoutedEventArgs e)
+		{
+			RomVindu objRomWindow = new RomVindu();
+			objRomWindow.Show();
+		}
+
+		private void ReservasjonButton_Click(object sender, RoutedEventArgs e)
+		{
+            ReservasjonVindu objReservasjonWindow = new ReservasjonVindu();
+            objReservasjonWindow.Show();
+		}
+	}
 }

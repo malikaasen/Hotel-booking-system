@@ -10,7 +10,7 @@ namespace SQLConnectionApplication.Model
 {
     public enum ReservasjonStatus
     {
-        Avslått, Pågående, Godkjent
+        Avslått = 0, Pågående = 1, Godkjent = 2
     }
     public class Reservasjon
     {

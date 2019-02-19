@@ -25,5 +25,32 @@ namespace SQLConnectionApplication.DataProviders
                 context.SaveChanges();
             }
         }
+
+        public void slettReservajon(int reservasjonsID)
+        {
+            using (var context = new DatabaseContext())
+            {
+                context.Reservasjoner.Remove(context.Reservasjoner.Where(r => r.ReservasjonID == reservasjonsID).FirstOrDefault());
+                context.SaveChanges();
+            }
+        }
+
+        public void EditReservasjon(Reservasjon reservasjon) 
+        {
+            Reservasjon res;
+            using (var context = new DatabaseContext())
+            {
+                res = context.Reservasjoner.Where(r => r.ReservasjonID == reservasjon.ReservasjonID).FirstOrDefault();
+                res.RomId = reservasjon.RomId;
+                res.ReservasjonStatus = reservasjon.ReservasjonStatus;
+                res.FraDato = reservasjon.FraDato;
+                res.TilDato = reservasjon.TilDato;
+                context.SaveChanges();
+
+
+            }
+        }
+
+       
     }
 }
