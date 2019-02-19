@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace Hotel_service
@@ -22,9 +23,45 @@ namespace Hotel_service
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private String type;
         public MainPage()
         {
             this.InitializeComponent();
         }
+
+        private void Button_Ren_Click(object sender, RoutedEventArgs e)
+        {
+            type = "rengjører";
+            FinnOppgaver(type);
+        }
+
+        private void Button_Room_Click(object sender, RoutedEventArgs e)
+        {
+            type = "roomservice";
+            FinnOppgaver(type);
+
+        }
+
+        private void Button_Main_Click(object sender, RoutedEventArgs e)
+        {
+            type = "maintanace";
+            FinnOppgaver(type);
+        }
+        //test
+        private List<String> FinnOppgaver(String type)
+        {
+            List<String> test = new List<String>();
+            switch(type){
+                case "rengjører":
+                    break;
+                case "roomservice":
+                    break;
+                case "maintanace":
+                    break;
+
+            }
+            return test;
+        }
+         
     }
 }
