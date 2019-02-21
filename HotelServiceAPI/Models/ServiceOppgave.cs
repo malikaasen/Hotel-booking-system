@@ -9,15 +9,15 @@ namespace HotelServiceAPI.Models
     public class ServiceOppgaveDTO
     {
         public int RomID { get; set; }
-        public string OppgaveType { get; set; }
+        public OppgaveType OppgaveType { get; set; }
         public string Beskrivelse { get; set; }
         public string Notat { get; set; }
-        public string Status { get; set; }
+        public Status Status { get; set; }
 
         public ServiceOppgaveDTO CreateFromEntity(ServiceOppgave serviceOppgave)
         {
             
-            return new ServiceOppgaveDTO() { RomID = serviceOppgave.RomID, Beskrivelse = serviceOppgave.Beskrivelse, OppgaveType = serviceOppgave.Status.ToString()};
+            return new ServiceOppgaveDTO() { RomID = serviceOppgave.RomID, Beskrivelse = serviceOppgave.Beskrivelse, OppgaveType = serviceOppgave.OppgaveType, Status = serviceOppgave.Status};
         }
     }
 

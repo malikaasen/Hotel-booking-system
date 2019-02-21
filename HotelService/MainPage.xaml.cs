@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hotel_service.DataAccess;
+using Hotel_service.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +29,11 @@ namespace Hotel_service
         public MainPage()
         {
             this.InitializeComponent();
+            ServiceOppgaveAPIClient serviceOppgaveAPIClient = new ServiceOppgaveAPIClient();
+
+            var apiResultat = serviceOppgaveAPIClient.HentServiceOppgaverAsync();
+            List<ServiceOppgave> oppgaver = apiResultat.Result;
+
         }
 
         private void Button_Ren_Click(object sender, RoutedEventArgs e)
