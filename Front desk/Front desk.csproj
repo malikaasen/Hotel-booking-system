@@ -70,9 +70,6 @@
     <Compile Include="RomVindu.xaml.cs">
       <DependentUpon>RomVindu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ServiceVindu.xaml.cs">
-      <DependentUpon>ServiceVindu.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -90,10 +87,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RomVindu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ServiceVindu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

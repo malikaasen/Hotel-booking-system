@@ -8,12 +8,12 @@ namespace SQLConnectionApplication.Model
 {
     public enum OppgaveType
     {
-        Renhold = 0, Service = 1, Vedlikehold = 2
+        Renhold, Service, Vedlikehold
     }
 
     public enum Status
     {
-        Ny = 0, Pågående = 1, Ferdig = 2
+        Ny, Pågående, Ferdig
     }
 
     public class ServiceOppgave

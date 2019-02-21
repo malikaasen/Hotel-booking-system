@@ -9,9 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid HorizontalAlignment="Stretch" Margin="0,0,10,10" VerticalAlignment="Stretch" Background="White">
-        <Button Name="Button_Ren" Content="Rengjører" HorizontalAlignment="Stretch" Margin="84,0,895,79" VerticalAlignment="Bottom" Click="Button_Ren_Click" Height="115"/>
-        <Button Name="Button_Room" Content="Roomeservice" HorizontalAlignment="Stretch" Margin="490,0,489,79" VerticalAlignment="Bottom" Click="Button_Room_Click" Height="115"/>
-        <Button Name="Button_Main" Content="Maintanace" HorizontalAlignment="Stretch" Margin="911,0,68,79" VerticalAlignment="Bottom" Click="Button_Main_Click" Height="115"/>
+        <Button Name="Button_Ren" Content="Rengjører" HorizontalAlignment="Left" Height="115" Margin="84,516,0,0" VerticalAlignment="Top"  Width="291" Click="Button_Ren_Click"/>
+        <Button Name="Button_Room" Content="Roomeservice" HorizontalAlignment="Center" Height="115" Margin="0,516,0,0" VerticalAlignment="Top" Width="291" Click="Button_Room_Click"/>
+        <Button Name="Button_Main" Content="Maintanace" HorizontalAlignment="Left" Height="115" Margin="911,516,0,0" VerticalAlignment="Top" Width="291" Click="Button_Main_Click"/>
 
     </Grid>
 </Page>
