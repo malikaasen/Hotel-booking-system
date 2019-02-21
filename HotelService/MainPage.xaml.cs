@@ -40,19 +40,21 @@ namespace Hotel_service
         {
             type = "rengjører";
             FinnOppgaver(type);
+            this.Frame.Navigate(typeof(NewPage), type);
         }
 
         private void Button_Room_Click(object sender, RoutedEventArgs e)
         {
             type = "roomservice";
             FinnOppgaver(type);
-
+            this.Frame.Navigate(typeof(NewPage), type);
         }
 
         private void Button_Main_Click(object sender, RoutedEventArgs e)
         {
             type = "maintanace";
             FinnOppgaver(type);
+            this.Frame.Navigate(typeof(NewPage), type);
         }
         //test
         private List<String> FinnOppgaver(String type)
