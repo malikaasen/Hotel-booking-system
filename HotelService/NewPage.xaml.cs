@@ -36,11 +36,11 @@ namespace Hotel_service
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             string type = e.Parameter as String;
-            if(type == "rengjører")
+            if (type == "rengjører")
             {
                 textBlock.Text = "Oppgaver for rengjører";
             }
-            else if(type == "roomservice")
+            else if (type == "roomservice")
             {
                 textBlock.Text = "Oppgaver for room service";
             }

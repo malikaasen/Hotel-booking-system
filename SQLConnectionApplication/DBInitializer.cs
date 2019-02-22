@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace SQLConnectionApplication
 {
-    class DBInitializer<T> : CreateDatabaseIfNotExists<DatabaseContext>
+    class DBInitializer<T> : DropCreateDatabaseIfModelChanges<DatabaseContext>
     {
         protected override void Seed(DatabaseContext context)
         {
             IList<Rom> rom = new List<Rom>();
             IList<Kunde> kunder = new List<Kunde>();
             IList<Reservasjon> reservasjoner = new List<Reservasjon>();
+            IList<ServiceOppgave> serviceOppgaver = new List<ServiceOppgave>();
 
 
             // Legger til rom 
@@ -45,6 +46,14 @@ namespace SQLConnectionApplication
                 KundeID = 1,
                 Navn = "Ola Nordmann",
                 Passord = "katt",
+            });
+
+            serviceOppgaver.Add(new ServiceOppgave
+            {
+                OppgaveType = OppgaveType.Renhold,
+                RomID = 1,
+                Beskrivelse = "Renhold av om 1",
+                Status = Status.Ny
             });
 
             foreach (Rom romObjekt in rom)
