@@ -36,16 +36,20 @@ namespace Hotel_service
 
         }
 
+
+
         private void Button_Ren_Click(object sender, RoutedEventArgs e)
         {
             type = "rengjører";
             FinnOppgaver(type);
+            this.Frame.Navigate(typeof(NewPage), type);
         }
 
         private void Button_Room_Click(object sender, RoutedEventArgs e)
         {
             type = "roomservice";
             FinnOppgaver(type);
+            this.Frame.Navigate(typeof(NewPage), type);
 
         }
 
@@ -53,6 +57,7 @@ namespace Hotel_service
         {
             type = "maintanace";
             FinnOppgaver(type);
+            this.Frame.Navigate(typeof(NewPage), type);
         }
         //test
         private List<String> FinnOppgaver(String type)

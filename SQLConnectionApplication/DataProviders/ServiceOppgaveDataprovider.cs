@@ -34,6 +34,31 @@ namespace SQLConnectionApplication.DataProviders
             }
         }
 
+        public void SlettServiceOppgave(int serviceNummer)
+        {
+            using (var context = new DatabaseContext())
+            {
+                context.ServiceOppgaver.Remove(context.ServiceOppgaver.Where(r => r.ServiceOppgaveId == serviceNummer).FirstOrDefault());
+                context.SaveChanges();
+            }
+        }
+
+        public void EditServiceOppgave(ServiceOppgave serviceOppgave)
+        {
+            ServiceOppgave serviceoppg;
+            using (var context = new DatabaseContext())
+            {
+                serviceoppg = context.ServiceOppgaver.Where(r => r.ServiceOppgaveId == serviceOppgave.RomID).FirstOrDefault();
+                serviceoppg.OppgaveType = serviceOppgave.OppgaveType;
+                serviceoppg.RomID = serviceOppgave.RomID;
+                serviceoppg.Status = serviceOppgave.Status;
+                serviceoppg.Beskrivelse = serviceOppgave.Beskrivelse;
+                serviceoppg.Notat = serviceOppgave.Notat;
+                context.SaveChanges();
+            }
+        }
+
+
 
     }
 }
