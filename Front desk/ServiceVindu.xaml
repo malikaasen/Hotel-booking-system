@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Front_desk"
         mc:Ignorable="d"
-        Title="ServiceVindu" Height="450" Width="800">
+        Title="ServiceVindu" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ListView HorizontalAlignment="Left" Height="373" Margin="10,10,0,0" VerticalAlignment="Top" Width="670" SelectionChanged="ListView_SelectionChanged">
+        <ListView x:Name ="ListView1" HorizontalAlignment="Left" Height="373" Margin="10,10,0,0" VerticalAlignment="Top" Width="670" SelectionChanged="ListView_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Serviceoppgave id" DisplayMemberBinding="{Binding ServiceOppgaveId}" Width="110"/>
+                    <GridViewColumn Header="Rom ID" DisplayMemberBinding="{Binding RomID}" Width="70"/>
+                    <GridViewColumn Header="Service Type" DisplayMemberBinding="{Binding OppgaveType}" Width="100"/>
+                    <GridViewColumn Header="Service beskrivelse" DisplayMemberBinding="{Binding Beskrivelse}" Width="140"/>
+                    <GridViewColumn Header="Service notat" DisplayMemberBinding="{Binding Notat}" Width="150"/>
+                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -26,13 +31,21 @@
                 </TransformGroup>
             </ComboBox.RenderTransform>
         </ComboBox>
-        <ComboBox x:Name="serviceTypeBox" HorizontalAlignment="Left" Margin="132,388,0,0" VerticalAlignment="Top" Width="93" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="serviceTypeBox" HorizontalAlignment="Left" Margin="132,388,0,0" VerticalAlignment="Top" Width="93">
+            <ComboBoxItem Content="Renhold" IsSelected="True"/>
+            <ComboBoxItem Content="Service"/>
+            <ComboBoxItem Content="Vedlikehold"/>
+        </ComboBox>
         <TextBox x:Name="beskrivelseBox" HorizontalAlignment="Left" Height="23" Margin="230,388,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128"/>
         <TextBox x:Name="notatBox" HorizontalAlignment="Left" Height="23" Margin="363,388,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="146"/>
-        <ComboBox x:Name="statusBox" HorizontalAlignment="Left" Margin="514,388,0,0" VerticalAlignment="Top" Width="96"/>
-        <Button x:Name="leggTilButton" Content="Legg til" HorizontalAlignment="Left" Margin="685,388,0,0" VerticalAlignment="Top" Width="97" Height="23"/>
-        <Button x:Name="editButton" Content="Edit" HorizontalAlignment="Left" Margin="685,363,0,0" VerticalAlignment="Top" Width="97"/>
-        <Button x:Name="slettKnapp" Content="Slett" HorizontalAlignment="Left" Margin="685,79,0,0" VerticalAlignment="Top" Width="97"/>
+        <ComboBox x:Name="statusBox" HorizontalAlignment="Left" Margin="514,388,0,0" VerticalAlignment="Top" Width="96">
+            <ComboBoxItem Content="Ny" IsSelected="True"/>
+            <ComboBoxItem Content="Pågående"/>
+            <ComboBoxItem Content="Ferdig"/>
+        </ComboBox>
+        <Button x:Name="leggTilButton" Content="Legg til" HorizontalAlignment="Left" Margin="685,388,0,0" VerticalAlignment="Top" Width="97" Height="23" Click="LeggTilButton_Click"/>
+        <Button x:Name="editButton" Content="Edit" HorizontalAlignment="Left" Margin="685,363,0,0" VerticalAlignment="Top" Width="97" Click="EditButton_Click"/>
+        <Button x:Name="slettKnapp" Content="Slett" HorizontalAlignment="Left" Margin="685,79,0,0" VerticalAlignment="Top" Width="97" Click="SlettKnapp_Click"/>
 
     </Grid>
 </Window>

@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="RomButton" Content="Trykk meg" HorizontalAlignment="Left" Margin="137,249,0,0" VerticalAlignment="Top" Width="75" Click="OpneRomVindu"/>
+        <Button x:Name="RomButton" Content="Trykk meg" HorizontalAlignment="Left" Margin="137,254,0,0" VerticalAlignment="Top" Width="75" Click="OpneRomVindu"/>
         <Label Content="Front Desk Application" HorizontalAlignment="Left" Margin="260,10,0,0" VerticalAlignment="Top" Width="260" FontFamily="Segoe UI Black" FontSize="22"/>
         <Label Content="Rom" HorizontalAlignment="Left" Margin="157,199,0,0" VerticalAlignment="Top"/>
         <Label Content="Reservasjoner" HorizontalAlignment="Left" Margin="358,199,0,0" VerticalAlignment="Top"/>
         <Label Content="Service" HorizontalAlignment="Left" Margin="599,199,0,0" VerticalAlignment="Top"/>
         <Button x:Name="ReservasjonButton" Content="Click me" HorizontalAlignment="Left" Margin="358,254,0,0" VerticalAlignment="Top" Width="75" Click="ReservasjonButton_Click"/>
-        <Button x:Name="ServiceButton" Content="Touch Me" HorizontalAlignment="Left" Margin="584,249,0,0" VerticalAlignment="Top" Width="75" Click="ServiceButton_Click"/>
+        <Button x:Name="ServiceButton" Content="Touch Me" HorizontalAlignment="Left" Margin="584,254,0,0" VerticalAlignment="Top" Width="75" Click="ServiceButton_Click"/>
 
     </Grid>
 </Window>

@@ -48,7 +48,7 @@ namespace SQLConnectionApplication.DataProviders
             ServiceOppgave  serviceoppg;
             using (var context = new DatabaseContext())
             {
-                serviceoppg = context.ServiceOppgaver.Where(r => r.ServiceOppgaveId == serviceOppgave.RomID).FirstOrDefault();
+                serviceoppg = context.ServiceOppgaver.Where(r => r.ServiceOppgaveId == serviceOppgave.ServiceOppgaveId).FirstOrDefault();
                 serviceoppg.OppgaveType = serviceOppgave.OppgaveType;
                 serviceoppg.RomID = serviceOppgave.RomID;
                 serviceoppg.Status = serviceOppgave.Status;
