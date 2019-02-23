@@ -1,38 +1,37 @@
 ﻿using Hotel_service.Model;
-using Newtonsoft.Json;
+using Hotel_service.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+
 
 namespace Hotel_service.DataAccess
 {
-    public class ServiceOppgaveAPIClient
+    public static class ServiceOppgaveAPIClient
     {
-        static HttpClient client = new HttpClient();
-        
-        public ServiceOppgaveAPIClient()
-        {
-            client.BaseAddress = new Uri("http://localhost:64418/serviceoppgaver");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        }
 
-        public async Task<List<ServiceOppgave>> HentServiceOppgaverAsync()
+        public static async Task  <List<ServiceOppgave>> HentServiceOppgaver()
         {
-            string result = "";
-            List<ServiceOppgave> serviceOppgaver;
-            HttpResponseMessage response = await client.GetAsync(client.BaseAddress);
-            
-            if (response.IsSuccessStatusCode)
+            string url = "http://localhost:64419/ServiceOppgaver";
+
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
             {
-                result = await response.Content.ReadAsStringAsync();
+                if (response.IsSuccessStatusCode)
+                {
+                    string data = await response.Content.ReadAsStringAsync();
+
+                    List<ServiceOppgave> oppgaver = JsonConvert.DeserializeObject<List<ServiceOppgave>>(data);
+                    return oppgaver;
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
             }
-            serviceOppgaver = JsonConvert.DeserializeObject<List<ServiceOppgave>>(result);
-            return serviceOppgaver;
+
+
         }
     }
 }

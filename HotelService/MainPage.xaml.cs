@@ -1,10 +1,12 @@
 ﻿using Hotel_service.DataAccess;
 using Hotel_service.Model;
+using Hotel_service.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,54 +27,55 @@ namespace Hotel_service
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
         private String type;
         public MainPage()
         {
             this.InitializeComponent();
-            ServiceOppgaveAPIClient serviceOppgaveAPIClient = new ServiceOppgaveAPIClient();
-
-            var apiResultat = serviceOppgaveAPIClient.HentServiceOppgaverAsync();
-            List<ServiceOppgave> oppgaver = apiResultat.Result;
-
+            ApiHelper.InitializeClient();
         }
 
 
 
-        private void Button_Ren_Click(object sender, RoutedEventArgs e)
+        private async void Button_Ren_Click(object sender, RoutedEventArgs e)
         {
             type = "rengjører";
-            FinnOppgaver(type);
+            await FinnOppgaver(type);
             this.Frame.Navigate(typeof(NewPage), type);
         }
 
-        private void Button_Room_Click(object sender, RoutedEventArgs e)
+        private async void Button_Room_Click(object sender, RoutedEventArgs e)
         {
             type = "roomservice";
-            FinnOppgaver(type);
+            await FinnOppgaver(type);
             this.Frame.Navigate(typeof(NewPage), type);
 
         }
 
-        private void Button_Main_Click(object sender, RoutedEventArgs e)
+        private async void Button_Main_Click(object sender, RoutedEventArgs e)
         {
             type = "maintanace";
-            FinnOppgaver(type);
+            await FinnOppgaver(type);
             this.Frame.Navigate(typeof(NewPage), type);
         }
         //test
-        private List<String> FinnOppgaver(String type)
+        private async Task FinnOppgaver(String type)
         {
-            List<String> test = new List<String>();
+            var serviceOppgaver = await ServiceOppgaveAPIClient.HentServiceOppgaver();
+            List<ServiceOppgave> oppgaver;
             switch(type){
                 case "rengjører":
+                    oppgaver = serviceOppgaver.FindAll(so => so.OppgaveType == OppgaveType.Renhold);
                     break;
                 case "roomservice":
+                    oppgaver = serviceOppgaver.FindAll(so => so.OppgaveType == OppgaveType.Service);
+
                     break;
                 case "maintanace":
+                    oppgaver = serviceOppgaver.FindAll(so => so.OppgaveType == OppgaveType.Vedlikehold);
                     break;
-
             }
-            return test;
+            
         }
          
     }
