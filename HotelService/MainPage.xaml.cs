@@ -32,51 +32,27 @@ namespace Hotel_service
         public MainPage()
         {
             this.InitializeComponent();
-            ApiHelper.InitializeClient();
         }
 
 
 
-        private async void Button_Ren_Click(object sender, RoutedEventArgs e)
+        private void Button_Ren_Click(object sender, RoutedEventArgs e)
         {
-            type = "rengjører";
-            await FinnOppgaver(type);
-            this.Frame.Navigate(typeof(NewPage), type);
+            type = "Renhold";
+            this.Frame.Navigate(typeof(ServiceOppgaveSide), type);
         }
 
-        private async void Button_Room_Click(object sender, RoutedEventArgs e)
+        private void Button_Room_Click(object sender, RoutedEventArgs e)
         {
-            type = "roomservice";
-            await FinnOppgaver(type);
-            this.Frame.Navigate(typeof(NewPage), type);
+            type = "Service";
+            this.Frame.Navigate(typeof(ServiceOppgaveSide), type);
 
         }
 
-        private async void Button_Main_Click(object sender, RoutedEventArgs e)
+        private void Button_Main_Click(object sender, RoutedEventArgs e)
         {
-            type = "maintanace";
-            await FinnOppgaver(type);
-            this.Frame.Navigate(typeof(NewPage), type);
+            type = "Vedlikehold";
+            this.Frame.Navigate(typeof(ServiceOppgaveSide), type);
         }
-        //test
-        private async Task FinnOppgaver(String type)
-        {
-            var serviceOppgaver = await ServiceOppgaveAPIClient.HentServiceOppgaver();
-            List<ServiceOppgave> oppgaver;
-            switch(type){
-                case "rengjører":
-                    oppgaver = serviceOppgaver.FindAll(so => so.OppgaveType == OppgaveType.Renhold);
-                    break;
-                case "roomservice":
-                    oppgaver = serviceOppgaver.FindAll(so => so.OppgaveType == OppgaveType.Service);
-
-                    break;
-                case "maintanace":
-                    oppgaver = serviceOppgaver.FindAll(so => so.OppgaveType == OppgaveType.Vedlikehold);
-                    break;
-            }
-            
-        }
-         
     }
 }

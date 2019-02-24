@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Hotel_service.DataAccess;
+using Hotel_service.Model;
+using Hotel_service.Services;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -20,12 +24,17 @@ namespace Hotel_service
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NewPage : Page
+    public sealed partial class ServiceOppgaveSide : Page
     {
-
-        public NewPage()
+        public ObservableCollection<ServiceOppgave> Oppgaver { get; set; }
+        string type;
+        public ServiceOppgaveSide()
         {
+            
             this.InitializeComponent();
+            Oppgaver = new ObservableCollection<ServiceOppgave>();
+            ListViewServiceOppgaver.ItemsSource = Oppgaver;
+            ApiHelper.InitializeClient();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -33,14 +42,31 @@ namespace Hotel_service
             this.Frame.Navigate(typeof(MainPage));
         }
 
+        private async void Oppgaver_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var serviceOppgaves = await ServiceOppgaveAPIClient.HentServiceOppgaver();
+            Oppgaver.Clear();
+            foreach (var oppgave in serviceOppgaves)
+            {
+                if (oppgave.OppgaveType.ToString() == type)
+                {
+                    Oppgaver.Add(oppgave);
+                }
+                
+            }
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            string type = e.Parameter as String;
-            if (type == "rengjører")
+            
+            type = e.Parameter as string;
+            if (type == "Renhold")
             {
                 textBlock.Text = "Oppgaver for rengjører";
+
+
             }
-            else if (type == "roomservice")
+            else if (type == "Service")
             {
                 textBlock.Text = "Oppgaver for room service";
             }

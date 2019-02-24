@@ -23,5 +23,10 @@ namespace Hotel_service.Model
         public string Beskrivelse { get; set; }
         public string Notat { get; set; }
         public Status Status { get; set; }
+
+        public override string ToString()
+        {
+            return $"Romnummer:{RomID}, Oppgavetype:{OppgaveType}, Beskrivelse:{Beskrivelse}, Notat:{Notat},Status:{Status}";
+        }
     }
 }
