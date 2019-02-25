@@ -9,7 +9,7 @@ namespace SQLConnectionApplication.Model
         public string Passord { get; set; }
 
         //Navigational properties
-        public virtual ICollection <Reservasjon> Reservasjoner { get; set; }
+        public virtual IList <Reservasjon> Reservasjoner { get; set; }
 
 
         public override string ToString()
