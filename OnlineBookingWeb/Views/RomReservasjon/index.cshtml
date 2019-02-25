@@ -11,14 +11,32 @@
 <h2>Rom Reservasjon</h2>
 
 <div class="container">
-    <form action="FinnLedigRom" method="post">
+    <form action="Index" method="post">
 
         <label for="fradato"><b>Fra Dato:</b></label>
-        <input type="datetime" name="fdato" required />
+        <input type="date" name="fdato" required />
 
         <label for="tildato"><b>Til Dato:</b></label>
-        <input type="datetime" name="tdato" required />
+        <input type="date" name="tdato" required />
 
+        <label for="storrelse"><b>Størrelse:</b></label>
+        <select name="storrelse">
+            <option value="0">Lite</option>
+            <option value="1">Middels</option>
+            <option value="2">Stort</option>
+        </select>
+
+        <label for="kvalitet"><b>Kvalitet:</b></label>
+        <select name="kvalitet">
+            <option value="0">Dårlig</option>
+            <option value="1">Middels</option>
+            <option value="2">Bra</option>
+        </select>
+
+        <label for="antallsenger"><b>Antall Senger:</b></label>
+        <input type="text" name="antallsenger" required />
+
+        <button type="submit">Finn Rom</button>
     </form>
    <table>
        <tr>

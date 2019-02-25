@@ -1,4 +1,5 @@
 ﻿using SQLConnectionApplication.DataProviders;
+using SQLConnectionApplication.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,17 +12,20 @@ namespace OnlineBookingWeb.Controllers
     public class RomReservasjonController : Controller
     {
 		RomDataprovider romProvider = new RomDataprovider();
+		List<Rom> roms = new List<Rom>();
         // GET: RomReservasjon
+		[HttpGet]
         public ActionResult Index()
         {
-            return View();
+			return View(roms);
         }
 
 		[HttpPost]
-		public ActionResult FinnLedigRom(DateTime fdato, DateTime tdato)
+		public ActionResult Index(DateTime fdato, DateTime tdato, String storrelse, String kvalitet, String antallsenger)
 		{
-			var model = romProvider.FinnAlleRom();
-			return View(model);
+
+			roms = romProvider.FinnAlleRom();
+			return View(roms);
 		}
 	}
 
