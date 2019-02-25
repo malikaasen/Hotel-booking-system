@@ -50,7 +50,5 @@ namespace SQLConnectionApplication.DataProviders
 
             }
         }
-
-       
     }
 }
