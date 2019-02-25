@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using OnlineBookingWeb.Services;
 using System.Web.Mvc;
 
 namespace OnlineBookingWeb.Controllers
@@ -12,6 +13,18 @@ namespace OnlineBookingWeb.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult LogonUser(string userName, string password)
+        {
+            var authenticationService = new AuthenticationService();
+
+            if (authenticationService.ValidateUser(userName, password))
+            {
+                return Content($"Du er logget inn {userName}, ditt passord er {password}");
+            }
+            else return Content("Feil innlogging");
         }
     }
 }
