@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Rom Reservasjon";
+}
+
+@model List<Rom>
+
+<h2>Rom Reservasjon</h2>
+
+<div class="container">
+    <form action="FinnLedigRom" method="post">
+
+        <label for="fradato"><b>Fra Dato:</b></label>
+        <input type="datetime" name="fdato" required />
+
+        <label for="tildato"><b>Til Dato:</b></label>
+        <input type="datetime" name="tdato" required />
+
+    </form>
+   <table>
+       <tr>
+           <th>
+               RomNummer
+           </th>
+       </tr>
+        @foreach(var rom in Model)
+        {
+            <tr>
+                <td>@rom</td>
+            </tr>
+        }
+   </table>
+
+</div>
