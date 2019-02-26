@@ -72,7 +72,6 @@ namespace Front_desk
 		private void AddButton_Click(object sender, RoutedEventArgs e)
 		{
             Reservasjon res = new Reservasjon();
-            res.ReservasjonID = Convert.ToInt32(this.ReservasjonsBox.Text);
             res.RomId = Convert.ToInt32(this.RomIDBox.SelectedIndex);
             res.KundeId = Convert.ToInt32(this.KundeIDBox.SelectedIndex);
 			res.ReservasjonStatus = (ReservasjonStatus) ReservasjonStatusBox.SelectedIndex;

@@ -1,9 +1,6 @@
 ﻿using SQLConnectionApplication.DataProviders;
 using SQLConnectionApplication.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace OnlineBookingWeb.Controllers
@@ -18,7 +15,7 @@ namespace OnlineBookingWeb.Controllers
         }
 
         [HttpPost]
-        public ActionResult RegisterUser(string userName, string password)
+        public ActionResult RegistrerKunde(string userName, string password)
         {
             kundeDataprovider = new KundeDataprovider();
             if (!(String.IsNullOrWhiteSpace(userName) && String.IsNullOrWhiteSpace(password))){
@@ -29,6 +26,7 @@ namespace OnlineBookingWeb.Controllers
                 kundeDataprovider.LeggTilKunde(kunde);
 
                 return RedirectToAction("index", "Login");
+                
             }
             else return RedirectToAction("index", "Registrer");
         }

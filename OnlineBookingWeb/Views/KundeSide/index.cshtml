@@ -7,7 +7,7 @@
 
 @if (Model.Navn != null)
 {
-    <h3>Hei Model.Navn !</h3>
+    <h3>Hei @Model.Navn !</h3>
 
     <input type="button" value="Gå til romreservasjon" onclick="location.href='@Url.Action("Index", "RomReservasjon", Model.KundeID)'" />
     <input type="button" value="Se status på reservasjoner" onclick="location.href='@Url.Action("Index", "ReservasjonStatus",Model.Navn )'" />
