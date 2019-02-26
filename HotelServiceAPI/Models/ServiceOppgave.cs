@@ -17,7 +17,7 @@ namespace HotelServiceAPI.Models
         public ServiceOppgaveDTO CreateFromEntity(ServiceOppgave serviceOppgave)
         {
             
-            return new ServiceOppgaveDTO() { RomID = serviceOppgave.RomID, Beskrivelse = serviceOppgave.Beskrivelse, OppgaveType = serviceOppgave.OppgaveType, Status = serviceOppgave.Status};
+            return new ServiceOppgaveDTO() { RomID = serviceOppgave.RomID, Beskrivelse = serviceOppgave.Beskrivelse, OppgaveType = serviceOppgave.OppgaveType, Status = serviceOppgave.Status, Notat = serviceOppgave.Notat};
         }
     }
 

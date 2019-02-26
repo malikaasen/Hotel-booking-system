@@ -14,12 +14,12 @@ namespace HotelServiceAPI.Controllers
     [RoutePrefix("ServiceOppgaver")]
     public class ServiceOppgaveController : ApiController
     {
-        
+
         [Route("")]
         [HttpGet]
         public IHttpActionResult HentAlleOppgaver()
         {
-            ServiceOppgaveDataprovider _serviceOppgaveDataprovider= new ServiceOppgaveDataprovider();
+            ServiceOppgaveDataprovider _serviceOppgaveDataprovider = new ServiceOppgaveDataprovider();
             List<ServiceOppgave> alleOppgaver = _serviceOppgaveDataprovider.FinnAlleOppgaver();
 
             var oppgaver = new List<ServiceOppgaveDTO>();
@@ -29,6 +29,16 @@ namespace HotelServiceAPI.Controllers
                 oppgaver.Add(new ServiceOppgaveDTO().CreateFromEntity(rom));
             }
             return Ok(oppgaver);
+        }
+
+        [Route("")]
+        [HttpPost]
+        public IHttpActionResult OppdaterOppgave([FromUri] int oppgaveId, [FromUri] string notat)
+        {
+            ServiceOppgaveDataprovider _serviceOppgaveDataprovider = new ServiceOppgaveDataprovider();
+
+            _serviceOppgaveDataprovider.OppdaterServiceOppgave(oppgaveId, notat);
+            return Ok();
         }
     }
 }

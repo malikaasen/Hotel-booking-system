@@ -58,6 +58,21 @@ namespace SQLConnectionApplication.DataProviders
             }
         }
 
+        public void OppdaterServiceOppgave(int oppgaveID, string notat )
+        {
+            using (var context = new DatabaseContext())
+            {
+                ServiceOppgave oppgave = context.ServiceOppgaver.SingleOrDefault(o => o.ServiceOppgaveId == oppgaveID);
+                oppgave.Notat = notat;
+                if (oppgave != null)
+                {
+                    context.ServiceOppgaver.Attach(oppgave);
+                    context.Entry(oppgave).Property(o => o.Notat).IsModified = true;
+                    context.SaveChanges();
+                }
+            }
+        }
+
 
 
     }
