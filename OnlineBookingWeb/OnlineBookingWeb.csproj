@@ -133,6 +133,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RegistrerController.cs" />
     <Compile Include="Controllers\ReservasjonStatusController.cs" />
     <Compile Include="Controllers\RomReservasjonController.cs" />
     <Compile Include="Global.asax.cs">
@@ -182,6 +183,7 @@
     <Content Include="Views\RomReservasjon\index.cshtml" />
     <Content Include="Views\Login\index.cshtml" />
     <Content Include="Views\ReservasjonStatus\index.cshtml" />
+    <Content Include="Views\Registrer\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

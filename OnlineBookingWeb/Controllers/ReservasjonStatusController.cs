@@ -11,13 +11,13 @@ namespace OnlineBookingWeb.Controllers
     public class ReservasjonStatusController : Controller
     {
         // GET: ReservasjonStatus
-        public ActionResult Index()
+        public ActionResult Index(string userName)
 
         {
             KundeDataprovider kundeDataprovder = new KundeDataprovider();
             ReservasjonDataprovider reservasjonDataprovider = new ReservasjonDataprovider();
 
-            var reservasjoner = reservasjonDataprovider.FinnAlleReservasjoner();
+            var reservasjoner = reservasjonDataprovider.FinnAlleReservasjoner().Where(r => r.Kunde.Navn == userName);
             return View(reservasjoner);
         }
 

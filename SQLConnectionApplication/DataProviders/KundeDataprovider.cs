@@ -38,6 +38,7 @@ namespace SQLConnectionApplication.DataProviders
             using (var context = new DatabaseContext())
             {
                 context.Kunder.Add(kunde);
+                context.SaveChanges();
             }
         }
 
