@@ -23,7 +23,7 @@ namespace OnlineBookingWeb.Controllers
 
             if (authenticationService.ValidateUser(userName, password))
             {
-                return RedirectToAction("index", "ReservasjonStatus", new { userName = userName });
+                return RedirectToAction("index", "KundeSide", new { userName = userName });
             }
             else return RedirectToAction("index", "Login");
         }
