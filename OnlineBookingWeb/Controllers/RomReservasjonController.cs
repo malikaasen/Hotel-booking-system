@@ -13,12 +13,18 @@ namespace OnlineBookingWeb.Controllers
     {
 		RomDataprovider romProvider = new RomDataprovider();
 		ReservasjonDataprovider reservasjonProvider = new ReservasjonDataprovider();
-
 		List<Rom> roms = new List<Rom>();
+
+		DateTime fraDato;
+		DateTime tilDato;
+		int kundeID;
+		int romID;
+
         // GET: RomReservasjon
 		[HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(int kuneID)
         {
+			kundeID = kuneID;
 			return View(roms);
         }
 
@@ -31,6 +37,10 @@ namespace OnlineBookingWeb.Controllers
 			System.Diagnostics.Debug.WriteLine(kvalitet);
 			System.Diagnostics.Debug.WriteLine(antallsenger);
 
+			fraDato = fdato;
+			tilDato = tdato;
+
+
 			var rommene = romProvider.FinnAlleRom();
             //	var reservasjonene = reservasjonProvider.FinnAlleReservasjoner();
             var muligrom = (from rom in rommene
@@ -42,7 +52,21 @@ namespace OnlineBookingWeb.Controllers
 			roms = (List<Rom>) muligrom;
 			return View(muligrom);
 		}
-		public  Boolean gyldigValg(Rom rom, int storrelse, int kvalitet, int antallsenger)
+		[HttpPost]
+		public ActionResult VelgRom(int RomID)
+		{
+			romID = RomID;
+			Reservasjon reservasjon = new Reservasjon();
+            reservasjon.RomId = romID;
+            reservasjon.KundeId = kundeID;
+            reservasjon.TilDato = tilDato;
+            reservasjon.FraDato = fraDato;
+            reservasjon.ReservasjonStatus = 0;
+			reservasjonProvider.LeggTilReservasjon(reservasjon);
+
+			return RedirectToAction("index", "KundeSide", kundeID);
+		}
+		public Boolean gyldigValg(Rom rom, int storrelse, int kvalitet, int antallsenger)
 		{
 			//if (((int) rom.Storrelse > storrelse) && ((int) rom.Kvalitet > kvalitet) && (rom.AntallSenger > antallsenger))
 			if(rom.AntallSenger < antallsenger)
