@@ -24,9 +24,17 @@ namespace Hotel_service.Model
         public string Notat { get; set; }
         public Status Status { get; set; }
 
+        public IEnumerable<Status> StatusTyper
+        {
+            get {
+                return Enum.GetValues(typeof(Status))
+                  .Cast<Status>();
+            }
+        }
+
         public override string ToString()
         {
-            return $"Romnummer:{RomID}, Oppgavetype:{OppgaveType}, Beskrivelse:{Beskrivelse}, Notat:{Notat},Status:{Status}";
+            return $"{RomID}, {OppgaveType},{Beskrivelse}, {Notat},{Status}";
         }
     }
 }
