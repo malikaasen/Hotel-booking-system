@@ -20,7 +20,6 @@
             </ListView.View>
         </ListView>
         <Label Content="Service" Margin="696,22,0,0" VerticalAlignment="Top" Height="35" Width="86" FontSize="18" FontFamily="Segoe UI Black" HorizontalAlignment="Left"/>
-        <TextBox x:Name="serviceIDBox" HorizontalAlignment="Left" Height="23" Margin="10,388,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="49"/>
         <ComboBox x:Name="romIDBox" HorizontalAlignment="Left" Margin="64,388,0,0" VerticalAlignment="Top" Width="63" RenderTransformOrigin="0.5,0.5">
             <ComboBox.RenderTransform>
                 <TransformGroup>
@@ -36,8 +35,8 @@
             <ComboBoxItem Content="Service"/>
             <ComboBoxItem Content="Vedlikehold"/>
         </ComboBox>
-        <TextBox x:Name="beskrivelseBox" HorizontalAlignment="Left" Height="23" Margin="230,388,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128"/>
-        <TextBox x:Name="notatBox" HorizontalAlignment="Left" Height="23" Margin="363,388,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="beskrivelseBox" HorizontalAlignment="Left" Height="23" Margin="230,388,0,0" TextWrapping="Wrap" Text="beskrivelse" VerticalAlignment="Top" Width="128"/>
+        <TextBox x:Name="notatBox" HorizontalAlignment="Left" Height="23" Margin="363,388,0,0" TextWrapping="Wrap" Text="notat" VerticalAlignment="Top" Width="146"/>
         <ComboBox x:Name="statusBox" HorizontalAlignment="Left" Margin="514,388,0,0" VerticalAlignment="Top" Width="96">
             <ComboBoxItem Content="Ny" IsSelected="True"/>
             <ComboBoxItem Content="Pågående"/>

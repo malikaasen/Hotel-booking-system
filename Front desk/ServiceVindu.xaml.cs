@@ -48,7 +48,6 @@ namespace Front_desk
         {
             ServiceOppgave service = new ServiceOppgave();
             var selectedItem = (ServiceOppgave) ListView1.SelectedItem;
-            service.ServiceOppgaveId = Convert.ToInt32(this.serviceIDBox.Text);
             service.RomID = Convert.ToInt32(this.romIDBox.SelectedValue);
             service.OppgaveType = (OppgaveType) this.serviceTypeBox.SelectedIndex;
             service.Beskrivelse = this.beskrivelseBox.Text;
@@ -61,7 +60,6 @@ namespace Front_desk
         private void LeggTilButton_Click(object sender, RoutedEventArgs e)
         {
             ServiceOppgave service = new ServiceOppgave();
-            service.ServiceOppgaveId = Convert.ToInt32(this.serviceIDBox.Text);
             service.RomID = Convert.ToInt32(this.romIDBox.SelectedValue);
             service.OppgaveType = (OppgaveType)serviceTypeBox.SelectedIndex;
             service.Beskrivelse = this.beskrivelseBox.Text;

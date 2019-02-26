@@ -9,8 +9,8 @@
 {
     <h3>Hei @Model.Navn !</h3>
 
-    <input type="button" value="Gå til romreservasjon" onclick="location.href='@Url.Action("Index", "RomReservasjon", Model.KundeID)'" />
-    <input type="button" value="Se status på reservasjoner" onclick="location.href='@Url.Action("Index", "ReservasjonStatus",Model.Navn )'" />
+    <input type="button" value="Gå til romreservasjon" onclick="location.href='@Url.Action("Index", "RomReservasjon",new {kundeId = Model.KundeID})'" />
+    <input type="button" value="Se status på reservasjoner" onclick="location.href='@Url.Action("Index", "ReservasjonStatus", new { userName = Model.Navn } )'" />
 }
 
 @if (Model.Navn == null)
