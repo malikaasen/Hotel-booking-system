@@ -72,19 +72,15 @@ namespace Front_desk
 		private void AddButton_Click(object sender, RoutedEventArgs e)
 		{
             Reservasjon res = new Reservasjon();
-            res.ReservasjonID = Convert.ToInt32(this.ReservasjonsBox.Text);
-            res.RomId = Convert.ToInt32(this.RomIDBox.SelectedIndex);
-            res.KundeId = Convert.ToInt32(this.KundeIDBox.SelectedIndex);
+            Kunde kunde = new KundeDataprovider().FinnKunde(this.KundeIDBox.SelectedIndex + 1);
+            Rom rom = new RomDataprovider().FinnRom(this.RomIDBox.SelectedIndex + 1);
+            res.ReservasjonID = 1;
+            res.RomId = rom.RomID;
+            res.KundeId = kunde.KundeID;
 			res.ReservasjonStatus = (ReservasjonStatus) ReservasjonStatusBox.SelectedIndex;
 			res.FraDato = (DateTime)this.FraDatoBox.SelectedDate;
             res.TilDato = (DateTime)this.TilDatoBox.SelectedDate;
-
-			Kunde kunde = kundeProvider.FinnKunde(Convert.ToInt32(this.KundeIDBox.SelectedIndex+1));
-            res.Kunde = kunde;
-			Rom rom = romProvider.FinnRom(Convert.ToInt32(this.RomIDBox.SelectedIndex+1));
-			res.Rom = rom;
 			reservasjonProvider.LeggTilReservasjon(res);
-
             ShowData();
         }
 		private void ShowData()

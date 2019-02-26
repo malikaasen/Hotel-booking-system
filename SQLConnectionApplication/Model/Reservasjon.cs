@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Linq;
-using System.Data.Linq.Mapping;
 
 namespace SQLConnectionApplication.Model
 {
@@ -27,7 +25,7 @@ namespace SQLConnectionApplication.Model
 
         public override string ToString()
         {
-            return $"RomNummer: {RomId}, Fra dato: {FraDato.Date}, Til dato: {TilDato.Date}, Kunde: {Kunde.Navn}";
+            return $"RomNummer: {RomId}, Fra dato: {FraDato.Date}, Til dato: {TilDato.Date}, Kunde: {Kunde.Navn}, ReservasjonStatus: {ReservasjonStatus}";
         }
     }
 }

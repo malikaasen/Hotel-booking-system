@@ -36,5 +36,11 @@ namespace Front_desk
             ReservasjonVindu objReservasjonWindow = new ReservasjonVindu();
             objReservasjonWindow.Show();
 		}
+
+		private void ServiceButton_Click(object sender, RoutedEventArgs e)
+		{
+			ServiceVindu objSerivceVindu = new ServiceVindu();
+			objSerivceVindu.Show();
+		}
 	}
 }

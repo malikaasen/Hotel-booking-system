@@ -13,7 +13,7 @@ namespace SQLConnectionApplication.DataProviders
         {
             using (var context = new DatabaseContext())
             {
-                return context.Kunder.Where(k => k.KundeID == kundeId).FirstOrDefault();
+                return context.Kunder.Include("Reservasjoner").Where(k => k.KundeID == kundeId).FirstOrDefault();
             }
         }
 
@@ -21,7 +21,7 @@ namespace SQLConnectionApplication.DataProviders
         {
             using (var context = new DatabaseContext())
             {
-                return context.Kunder.Where(k => k.Navn == kundeNavn).FirstOrDefault();
+                return context.Kunder.Include("Reservasjoner").Where(k => k.Navn == kundeNavn).FirstOrDefault();
             }
         }
 
@@ -38,6 +38,16 @@ namespace SQLConnectionApplication.DataProviders
             using (var context = new DatabaseContext())
             {
                 context.Kunder.Add(kunde);
+                context.SaveChanges();
+            }
+        }
+
+        public List<Reservasjon> FinnReservasjoner(string kundeNavn)
+        {
+            using (var context = new DatabaseContext())
+            {
+                Kunde kunde = FinnKunde(kundeNavn);
+                return kunde.Reservasjoner.ToList();
             }
         }
 
