@@ -26,7 +26,7 @@ namespace SQLConnectionApplication.DataProviders
         {
             using (var context = new DatabaseContext())
             {
-                return context.Rom.ToList();
+                return context.Rom.Include("Reservasjoner").ToList();
             }
         }
 
