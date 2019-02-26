@@ -6,11 +6,11 @@
     ViewBag.Title = "Login page";
 }
 
-<h2> Hotel Booking login page</h2>
+<h2> Hotel Booking login side</h2>
 
 <div class="container">
     
-    <form action="LogonUser" method="post">
+    <form action="~/Login/LogonUser" method="post">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="userName" required/>
 
@@ -18,9 +18,6 @@
         <input type="password" placeholder="Enter Password" name="password" required/>
 
         <button type="submit">Login</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
     </form>
     
 </div>

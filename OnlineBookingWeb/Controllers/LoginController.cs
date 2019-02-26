@@ -23,9 +23,9 @@ namespace OnlineBookingWeb.Controllers
 
             if (authenticationService.ValidateUser(userName, password))
             {
-                return Content($"Du er logget inn {userName}, ditt passord er {password}");
+                return RedirectToAction("index", "ReservasjonStatus", new { userName = userName });
             }
-            else return Content("Feil innlogging");
+            else return RedirectToAction("index", "Login");
         }
     }
 }

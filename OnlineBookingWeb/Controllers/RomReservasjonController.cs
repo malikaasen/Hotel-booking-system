@@ -23,7 +23,6 @@ namespace OnlineBookingWeb.Controllers
 		[HttpPost]
 		public ActionResult Index(DateTime fdato, DateTime tdato, String storrelse, String kvalitet, String antallsenger)
 		{
-
 			roms = romProvider.FinnAlleRom();
 			return View(roms);
 		}
