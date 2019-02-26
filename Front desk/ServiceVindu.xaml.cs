@@ -48,8 +48,9 @@ namespace Front_desk
         {
             ServiceOppgave service = new ServiceOppgave();
             var selectedItem = (ServiceOppgave) ListView1.SelectedItem;
+            service.ServiceOppgaveId = (int)selectedItem.ServiceOppgaveId;
             service.RomID = Convert.ToInt32(this.romIDBox.SelectedValue);
-            service.OppgaveType = (OppgaveType) this.serviceTypeBox.SelectedIndex;
+            service.OppgaveType = (OppgaveType) serviceTypeBox.SelectedIndex;
             service.Beskrivelse = this.beskrivelseBox.Text;
             service.Notat = this.notatBox.Text;
             service.Status = (Status)statusBox.SelectedIndex;
@@ -73,6 +74,7 @@ namespace Front_desk
         private void ShowData()
         {
             ListView1.Items.Clear();
+			romIDBox.Items.Clear();
             foreach (var row in serviceProvider.FinnAlleOppgaver())
             {
                 ListView1.Items.Add(row);

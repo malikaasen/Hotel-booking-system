@@ -45,7 +45,7 @@ namespace SQLConnectionApplication.DataProviders
 
         public void EditServiceOppgave(ServiceOppgave serviceOppgave)
         {
-            ServiceOppgave serviceoppg;
+            ServiceOppgave serviceoppg = new ServiceOppgave();
             using (var context = new DatabaseContext())
             {
                 serviceoppg = context.ServiceOppgaver.Where(r => r.ServiceOppgaveId == serviceOppgave.ServiceOppgaveId).FirstOrDefault();
