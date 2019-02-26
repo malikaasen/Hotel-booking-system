@@ -12,7 +12,7 @@ namespace Hotel_service.DataAccess
     public static class ServiceOppgaveAPIClient
     {
 
-        public static async Task  <List<ServiceOppgave>> HentServiceOppgaver()
+        public static async Task<List<ServiceOppgave>> HentServiceOppgaver()
         {
             string url = "http://localhost:64419/ServiceOppgaver";
 
@@ -30,10 +30,14 @@ namespace Hotel_service.DataAccess
                     throw new Exception(response.ReasonPhrase);
                 }
             }
+        }
 
-            
+            public static async Task OppdaterNotat(int serviceOppgaveId, string notat)
+            {
+                string url = $"http://localhost:64419/ServiceOppgaver?oppgaveId={serviceOppgaveId}&notat={notat}";
 
-
+                await ApiHelper.ApiClient.PostAsync(url, null);
+            }
         }
     }
 }
