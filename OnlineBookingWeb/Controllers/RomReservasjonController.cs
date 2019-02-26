@@ -22,20 +22,16 @@ namespace OnlineBookingWeb.Controllers
 
         // GET: RomReservasjon
 		[HttpGet]
-        public ActionResult Index(int kuneID)
+        public ActionResult Index(String kuneID)
         {
-			kundeID = kuneID;
+			kundeID = Convert.ToInt32(kuneID);
 			return View(roms);
         }
 
 		[HttpPost]
 		public ActionResult Index(DateTime fdato, DateTime tdato, int storrelse, int kvalitet, int antallsenger)
 		{
-			System.Diagnostics.Debug.WriteLine(fdato);
-			System.Diagnostics.Debug.WriteLine(tdato);
-			System.Diagnostics.Debug.WriteLine(storrelse);
-			System.Diagnostics.Debug.WriteLine(kvalitet);
-			System.Diagnostics.Debug.WriteLine(antallsenger);
+			
 
 			fraDato = fdato;
 			tilDato = tdato;
@@ -53,15 +49,21 @@ namespace OnlineBookingWeb.Controllers
 			return View(muligrom);
 		}
 		[HttpPost]
-		public ActionResult VelgRom(int RomID)
+		public ActionResult VelgRom(String RomID)
 		{
-			romID = RomID;
+			romID = Convert.ToInt32(RomID);
 			Reservasjon reservasjon = new Reservasjon();
             reservasjon.RomId = romID;
             reservasjon.KundeId = kundeID;
             reservasjon.TilDato = tilDato;
             reservasjon.FraDato = fraDato;
             reservasjon.ReservasjonStatus = 0;
+
+			System.Diagnostics.Debug.WriteLine(romID);
+			System.Diagnostics.Debug.WriteLine(kundeID);
+			System.Diagnostics.Debug.WriteLine(tilDato);
+			System.Diagnostics.Debug.WriteLine(fraDato);
+
 			reservasjonProvider.LeggTilReservasjon(reservasjon);
 
 			return RedirectToAction("index", "KundeSide", kundeID);

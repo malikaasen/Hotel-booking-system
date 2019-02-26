@@ -11,7 +11,7 @@
 <h2>Rom Reservasjon</h2>
 
 <div class="container">
-    <form action="Index" method="post">
+    <form action="~/RomReservasjon/Index" method="post">
 
         <label for="fradato"><b>Fra Dato:</b></label>
         <input type="date" name="fdato" required />
@@ -48,7 +48,7 @@
         {
             <tr>
                 <td>@rom</td>
-                <td><form action="VelgRom" method="post">
+                <td><form action="~/RomReservasjon/VelgRom" method="post">
                     <input type="hidden" value="@rom.RomID" />
                     <button type="submit">Velg rom</button>
                     </form></td>
