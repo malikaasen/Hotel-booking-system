@@ -54,16 +54,16 @@ namespace Front_desk
             Reservasjon res = new Reservasjon();
             var selectedItem = (Reservasjon)ListView1.SelectedItem;
             res.ReservasjonID = Convert.ToInt32(selectedItem.ReservasjonID);
-            res.RomId = Convert.ToInt32(this.RomIDBox.SelectedIndex);
-            res.KundeId = Convert.ToInt32(this.KundeIDBox.SelectedIndex);
+            res.RomId = Convert.ToInt32(this.RomIDBox.SelectedItem);
+            res.KundeId = Convert.ToInt32(this.KundeIDBox.SelectedItem);
             res.ReservasjonStatus = (ReservasjonStatus)ReservasjonStatusBox.SelectedIndex;
             res.FraDato = (DateTime)this.FraDatoBox.SelectedDate;
             res.TilDato = (DateTime)this.TilDatoBox.SelectedDate;
 
-            Kunde kunde = kundeProvider.FinnKunde(Convert.ToInt32(this.KundeIDBox.SelectedIndex + 1));
-            res.Kunde = kunde;
-            Rom rom = romProvider.FinnRom(Convert.ToInt32(this.RomIDBox.SelectedIndex + 1));
-            res.Rom = rom;
+            //Kunde kunde = kundeProvider.FinnKunde(Convert.ToInt32(this.KundeIDBox.SelectedIndex + 1));
+            //res.Kunde = kunde;
+            //Rom rom = romProvider.FinnRom(Convert.ToInt32(this.RomIDBox.SelectedIndex + 1));
+            //res.Rom = rom;
             reservasjonProvider.EditReservasjon(res);
 
             ShowData();
@@ -75,8 +75,8 @@ namespace Front_desk
             Kunde kunde = new KundeDataprovider().FinnKunde(this.KundeIDBox.SelectedIndex + 1);
             Rom rom = new RomDataprovider().FinnRom(this.RomIDBox.SelectedIndex + 1);
             res.ReservasjonID = 1;
-            res.RomId = rom.RomID;
-            res.KundeId = kunde.KundeID;
+            res.RomId = Convert.ToInt32(this.RomIDBox.SelectedItem);
+            res.KundeId = Convert.ToInt32(this.KundeIDBox.SelectedItem);
 			res.ReservasjonStatus = (ReservasjonStatus) ReservasjonStatusBox.SelectedIndex;
 			res.FraDato = (DateTime)this.FraDatoBox.SelectedDate;
             res.TilDato = (DateTime)this.TilDatoBox.SelectedDate;
@@ -86,6 +86,8 @@ namespace Front_desk
 		private void ShowData()
 		{
 			ListView1.Items.Clear();
+            KundeIDBox.Items.Clear();
+            RomIDBox.Items.Clear();
 			foreach (var row in reservasjonProvider.FinnAlleReservasjoner())
 			{
 				ListView1.Items.Add(row);

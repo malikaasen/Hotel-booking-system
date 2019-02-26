@@ -42,6 +42,7 @@ namespace SQLConnectionApplication.DataProviders
             {
                 res = context.Reservasjoner.Where(r => r.ReservasjonID == reservasjon.ReservasjonID).FirstOrDefault();
                 res.RomId = reservasjon.RomId;
+                res.KundeId = reservasjon.KundeId;
                 res.ReservasjonStatus = reservasjon.ReservasjonStatus;
                 res.FraDato = reservasjon.FraDato;
                 res.TilDato = reservasjon.TilDato;
