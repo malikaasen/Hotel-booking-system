@@ -38,6 +38,5 @@ namespace Hotel_service.DataAccess
 
                 await ApiHelper.ApiClient.PostAsync(url, null);
             }
-        }
     }
 }

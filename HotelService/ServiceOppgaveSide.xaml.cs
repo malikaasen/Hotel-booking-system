@@ -94,41 +94,6 @@ namespace Hotel_service
                 textBlock.Text = "Oppgaver for maintenance";
             }
         }
-
-        private void MyTextBox_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
-        {
-            var newText = args.NewText;
-            var oldText = sender.Text;
-            // TODO: process text change
-            OnPropertyChanged();
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //var comboBoxItem = (e.AddedItems[0] as ComboBoxItem).Content as String;
-            //if (comboBoxItem == null) return;
-
-            //if (comboBoxItem != null && comboBoxItem.Equals("some text"))
-            //{
-            //    return;
-            //    //do what ever you want
-            //}
-         
-        }
-
-        public void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null) =>
-             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-        //public async Task UpdateNotatsAsync()
-        //{
-        //    foreach (var modifiedNotat in Oppgaver
-        //        .Where(x => x.IsModified).Select(x => x.Model))
-        //    {
-        //        await App.Repository.Customers.UpsertAsync(modifiedCustomer);
-        //    }
-        //    await GetCustomerListAsync();
-        //}
-
     }
 }
 
